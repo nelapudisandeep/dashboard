@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body-wrapper">
+        <div class="calendar-wrapper">
+            <!-- preset from the javascript static file -->
+            <div class="sidebar-wrapper">
+                <div class="sidebar-header">
+                    <div class="today-container">
+                        <h3 class="date">3rd March,2021</h3>
+                        <p class="day">Tuesday</p>
+                    </div>
+                    <div class="important-notification">
+                        <p class="notif">Add a new notification!</p>
+                        <span class="display-hide" id="notificationId"></span>
+                    </div>
+                </div>
+                <div class="sidebar-body">
+                    <h1 class="heading">Tasks List</h1>
+                    <!-- could be developed,stopping here as for the lack of time! -->
+                    <div class="filter-container">
+                        <select name="monthFilter" id="monthFilter" class="select">
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun">Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sept">Sept</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                        </select>
+
+                        <select name="yearFilter" id="yearFilter" class="select">
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+
+                        <button class="filter btn">Filter</button>
+                        <button class="clear btn display-hide" id="clearFilter">Clear Filter</button>
+                        <button class="btn delete">Delete All</button>
+                    </div>
+                    <nav class="sidebar-list">
+                        <!-- this list will be served from the server! -->
+                    </nav>
+                </div>
+            </div>
+
+            <!-- actual calendar goes here... -->
+            <div class="dates-wrapper">
+                <!-- quote section -->
+                <div class="header-wrapper">
+                    <div class="quote-wrapper">
+                        <h3 class="quote"></h3>
+                        <p class="author"></p>
+                        <p class="author current-view">Currently viewing : <span class="current-view-month"></span>
+                            <span class="current-view-year"></span></p>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select name="month" id="month" class="select">
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun">Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sept">Sept</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                        </select>
+
+                        <select name="year" id="year" class="select">
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                    <span class="change">Look</span>
+
+                </div>
+                <div class="dates-container">
+
+                    <div class="date-header">
+                        <li class="date-header-item">Sun</li>
+                        <li class="date-header-item">Mon</li>
+                        <li class="date-header-item">Tue</li>
+                        <li class="date-header-item">Wed</li>
+                        <li class="date-header-item">Thu</li>
+                        <li class="date-header-item">Fri</li>
+                        <li class="date-header-item">Sat</li>
+                    </div>
+                    <div class="date-body">
+                        <!-- this will be generated by the javascript! -->
+
+                        <div class="week">
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                        </div>
+
+                        <div class="week">
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                        </div>
+
+                        <div class="week">
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                        </div>
+
+                        <div class="week">
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                        </div>
+
+                        <div class="week">
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                            <li class="week-date"></li>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- additional elements -->
+    <div class="color-container">
+        <div class="box red"></div>
+        <div class="box green active"></div>
+        <div class="box purple"></div>
+        <div class="box dark"></div>
+    </div>
+
+    <!-- modal wrappers -->
+    <div class="notif-modal-wrapper display-hide">
+        <div class="modal">
+            <button class="close">Close</button>
+            <input type="text" name="importantMessage" id="importantMessage">
+            <input type="button" value="Add" id="addImportantNotificationMessage">
+        </div>
+    </div>
+
+    <!-- date list wrappers -->
+    <div class="list-modal-wrapper display-hide">
+        <input type="button" class="btn" value="close" id="closeListModal">
+        <div class="list-body">
+            <div class="list-header">
+                <input type="text" name="listItemContent" id="listItemContent">
+                <input type="button" class="btn" value="Add" id="addItemToPreview">
+            </div>
+            <div name="listContent" id="listContent" class="list-nav-content-container"></div>
+            <input type="submit" value="Submit" class="btn" id="addListItem">
+        </div>
+    </div>
+
+    <!-- simple message modal -->
+    <div class="messageModal"></div>
+
+    <div class="promptModal display-hide">
+        <p class="promptText">Do you really want to delete all records?</p>
+        <button class="yes btn">Yes</button>
+        <button class="no">No</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
